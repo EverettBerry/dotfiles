@@ -1,27 +1,22 @@
-" Vundle code
-" To run this, :PluginInstall
-" or vim +PluginInstall +qall from command line
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-" Plugin 'gmarik/Vundle.vim'
-" Plugin 'morhetz/gruvbox'
-" Plugin 'bling/vim-airline'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'morhetz/gruvbox'
+Plugin 'bling/vim-airline'
 " Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
+
 " Brief help
 " :PluginList          - list configured plugins
 " :PluginInstall(!)    - install (update) plugins
@@ -30,6 +25,13 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" solarized colorscheme
+syntax enable
+let g:solarized_termtrans = 1
+colorscheme solarized
+set background=dark
+" togglebg#map("<F5>")
 
 " backspace button behaves normally
 set backspace=indent,eol,start
@@ -52,15 +54,15 @@ let g:airline#extensions#tabline#enabled = 1
 source ~/.regexlist.vim
 set background=dark
 " sublime text like colors
-if !(&foldmethod == 'diff')
-    colorscheme monokai 
-endif
+" if !(&foldmethod == 'diff')
+"     colorscheme monokai 
+" endif
 
 " syntax highlighting on
-syntax on
+" syntax on
 
 " indent following python
-filetype indent plugin on
+" filetype indent plugin on
 
 " show line numbers
 set number
@@ -75,3 +77,11 @@ function! <SID>SynStack()
 endfunc
 
 map <C-n> :NERDTreeToggle<CR>
+
+" Yank text to the OS X clipboard
+noremap <leader>y "*y
+noremap <leader>yy "*Y
+"
+" Preserve indentation while pasting text from the OS X clipboard
+noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+

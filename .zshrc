@@ -78,3 +78,14 @@ export PATH="/Users/Everett/.rvm/gems/ruby-2.0.0-p247/bin:/Users/Everett/.rvm/ge
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+#
+export EDITOR="vim"
+bindkey -v 
+
+## vi style incremental search
+bindkey '^R' history-incremental-search-backward
+bindkey '^S' history-incremental-search-forward
+bindkey '^P' history-search-backward
+bindkey '^N' history-search-forward 
+
