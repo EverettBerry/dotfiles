@@ -7,11 +7,12 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Plugin 'morhetz/gruvbox'
-Plugin 'bling/vim-airline'
-" Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'morhetz/gruvbox'                  " retro color scheme
+" Plugin 'bling/vim-airline'                " pimped out powerline
+Plugin 'scrooloose/nerdtree'                " directory structure
+Plugin 'scrooloose/syntastic'               " syntax checker
+Plugin 'altercation/vim-colors-solarized'   " color scheme
+Plugin 'Lokaltog/vim-powerline'             " bottom file stats
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -30,8 +31,7 @@ filetype plugin indent on    " required
 syntax enable
 let g:solarized_termtrans = 1
 colorscheme solarized
-set background=dark
-" togglebg#map("<F5>")
+call togglebg#map("<F5>")
 
 " backspace button behaves normally
 set backspace=indent,eol,start
@@ -50,9 +50,10 @@ set noswapfile
 set hlsearch
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
+
 " file to store complex regexes for reference again
 source ~/.regexlist.vim
-set background=dark
+
 " sublime text like colors
 " if !(&foldmethod == 'diff')
 "     colorscheme monokai 
@@ -84,4 +85,15 @@ noremap <leader>yy "*Y
 "
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+
+" begin syntactic recommended settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+" end syntactic recommended settings
 
