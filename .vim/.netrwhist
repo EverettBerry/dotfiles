@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/Everett/.vim'
+let g:netrw_dirhist_2='/Users/Everett/cpc2/filters/rberry'
+let g:netrw_dirhist_3='/Users/Everett/cpc2a/BigData/django/system/views'
+let g:netrw_dirhist_4='/Users/Everett/cpc2/BigData/django/system/views'
+let g:netrw_dirhist_5='/Users/Everett/Meshable/meshable.cpp'
+let g:netrw_dirhist_6='/Users/Everett/cpc2/BigData/django/static/js/lib'
+let g:netrw_dirhist_7='/Users/Everett/cpc2/BigData/django/system/views'
