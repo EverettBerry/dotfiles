@@ -39,7 +39,7 @@ call togglebg#map("<F5>")
 " backspace button behaves normally
 set backspace=indent,eol,start
 
-" spacing for vertica codebase
+" spacing for vertica codebase (spacing should be dependent on file type)
 set softtabstop=4
 set shiftwidth=4
 set tabstop=4
