@@ -51,7 +51,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/Users/Everett/.rvm/gems/ruby-2.0.0-p247/bin:/Users/Everett/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/Everett/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/Everett/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/Everett/.rvm/bin"
+# export PATH="/Users/Everett/.rvm/gems/ruby-2.0.0-p247/bin:/Users/Everett/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/Everett/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/Everett/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/Everett/.rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
