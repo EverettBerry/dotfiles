@@ -15,8 +15,14 @@ Configuration files
 
 # Problems
 1. I think the zsh config script auto sets the PATH which may make it wrong in some cases - check the PATH in the .zsrhc if there are problems
-2. The default theme (light solarized vs. dark) is wrong on linux systems (something to do with GNOME terminal settings.  The result is that you have to use f5 to change to the correct setting in vim
-3. Copy mode is kinda fucked - just need to figure out how to use it properly
+2. Copy mode is kinda fucked - just need to figure out how to use it properly
+3. Switching light vs dark colors is kinda screwy too, improve this a little
+4. Set up auto indenting in VIM based on file type (maybe find a plugin?)
 
 # Common TMUX commands
 1. Resize windows with keyboard: CTRL B + ALT <arrow key> (something extra required on Mac) 
+
+# Changing light and dark colorschemes
+1. Set background to light in vimrc
+2. Change terminal profile to use light or dark (GUI option for iTERM, ./set_light or ./set_dark)
+

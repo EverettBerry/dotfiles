@@ -31,10 +31,11 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " solarized colorscheme
-syntax enable
+set t_Co=256
+set background=dark
 let g:solarized_termtrans = 1
 colorscheme solarized
-call togglebg#map("<F5>")
+call togglebg#map("<F5>") " see README for details about this
 
 " backspace button behaves normally
 set backspace=indent,eol,start
@@ -90,6 +91,7 @@ noremap <leader>yy "*Y
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
 " begin syntactic recommended settings
+syntax enable
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
