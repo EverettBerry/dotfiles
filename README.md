@@ -21,6 +21,7 @@ Configuration files
 
 # Common TMUX commands
 1. Resize windows with keyboard: CTRL B + ALT <arrow key> (something extra required on Mac) 
+2. See this URL for more: https://docs.python.org/2/library/unittest.html#basic-example
 
 # Changing light and dark colorschemes
 1. Set background to light in vimrc

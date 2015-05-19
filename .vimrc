@@ -16,6 +16,7 @@ Plugin 'Lokaltog/vim-powerline'             " bottom file stats
 Plugin 'klen/python-mode'                   " much python addons
 Plugin 'davidhalter/jedi-vim'               " better python auto complete
 Plugin 'tpope/vim-fugitive'                 " git in vim
+Plugin 'nachumk/systemverilog.vim'          " system verilog 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
