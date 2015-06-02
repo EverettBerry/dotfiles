@@ -51,7 +51,7 @@ Plugin 'tmhedberg/matchit'                  " html tag matching
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
+filetype plugin indent on    " detect filetype (python, js, etc.)
 
 " solarized colorscheme
 set t_Co=256
@@ -63,14 +63,16 @@ call togglebg#map("<F5>") " see README for details about this
 " backspace button behaves normally
 set backspace=indent,eol,start
 
-" spacing for vertica codebase (spacing should be dependent on file type)
-set softtabstop=2
-set shiftwidth=4
-set tabstop=4
+" tab makes spaces (may need "set smarttab")
 set et
-set smarttab
-set st=4
 
+" appropriate indentation based on file type
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd Filetype python setlocal shiftwidth=4 tabstop=4
+autocmd Filetype html setlocal shiftwidth=2 tabstop=2
+autocmd Filetype cpp setlocal shiftwidth=4 tabstop=4
+
+" no "~" files
 set noswapfile
 set nobackup
 
@@ -78,17 +80,6 @@ set nobackup
 set hlsearch
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
-
-" sublime text like colors
-" if !(&foldmethod == 'diff')
-"     colorscheme monokai 
-" endif
-
-" syntax highlighting on
-" syntax on
-
-" indent following python
-" filetype indent plugin on
 
 " show line numbers
 set number
@@ -123,7 +114,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 " end syntactic recommended settings
 
-" font 
+" font (for windows)
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Inconsolata\ 12
