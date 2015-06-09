@@ -4,13 +4,15 @@ Configuration files
 # Steps to setup on fresh machine
 1. apt-get (or brew) install zsh
 2. apt-get (or brew) install tmux
+2. chsh (change shell, enter pw, zsh is /usr/bin/zsh for linux)
 3. wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
 4. git clone everettberry/dotfiles.git
 5. ln -s dotfiles/.vimrc .vimrc
 6. ln -s dotfiles/.zshrc .zshrc
 7. ln -s dotfiles/.tmux.conf .tmux.conf
 7. mkdir .vim && mkdir .vim/bundle
-8. git clone https://github.com/gmarik/vundle ~/.vim/bundle/Vundle.vim  
+8. git clone https://github.com/gmarik/vundle ~/.vim/bundle/Vundle.vim 
+8. apt-get install vim (may have to do this - should be 7.4)
 9. (In vim) :BundleInstall! or (command line) vim +BundleInstall
 
 # Problems

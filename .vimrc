@@ -56,9 +56,6 @@ set hlsearch
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 
-" file to store complex regexes for reference again
-source ~/.regexlist.vim
-
 " sublime text like colors
 " if !(&foldmethod == 'diff')
 "     colorscheme monokai 
