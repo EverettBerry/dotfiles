@@ -20,7 +20,7 @@ Configuration files
 4. Set up auto indenting in VIM based on file type (maybe find a plugin?)
 
 # Common TMUX commands
-1. Resize windows with keyboard: CTRL B + ALT <arrow key> (something extra required on Mac) 
+1. Resize windows with keyboard: CTRL B + ALT <arrow key>
 2. See this URL for more: https://docs.python.org/2/library/unittest.html#basic-example
 
 # Changing light and dark colorschemes
