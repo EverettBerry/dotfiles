@@ -20,7 +20,7 @@ Plugin 'nachumk/systemverilog.vim'          " system verilog
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
+filetype plugin indent on    " detect filetype (python, js, etc.)
 
 " Brief help
 " :PluginList          - list configured plugins
@@ -41,31 +41,23 @@ call togglebg#map("<F5>") " see README for details about this
 " backspace button behaves normally
 set backspace=indent,eol,start
 
-" spacing for vertica codebase (spacing should be dependent on file type)
-set softtabstop=4
-set shiftwidth=4
-set tabstop=4
-set et
-set smarttab
-set st=4
-
+" damn you ~ files!!
 set noswapfile
+set nobackup
 
-" highlight found items on search
+"tab makes spaces (may need "set smarttab")
+set et
+
+" appropriate indentation based on file type
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd Filetype python setlocal shiftwidth=4 tabstop=4
+autocmd Filetype html setlocal shiftwidth=2 tabstop=2
+autocmd Filetype cpp setlocal shiftwidth=4 tabstop=4highlight found items on search
+
+" highlight items found on search
 set hlsearch
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
-
-" sublime text like colors
-" if !(&foldmethod == 'diff')
-"     colorscheme monokai 
-" endif
-
-" syntax highlighting on
-" syntax on
-
-" indent following python
-" filetype indent plugin on
 
 " show line numbers
 set number
@@ -81,19 +73,13 @@ endfunc
 
 map <C-n> :NERDTreeToggle<CR>
 
-" Yank text to the OS X clipboard
-noremap <leader>y "*y
-noremap <leader>yy "*Y
-
-" Preserve indentation while pasting text from the OS X clipboard
-noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
-
 " begin syntactic recommended settings
 syntax enable
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+" turn these off if quickview is too annoying (looking at new projects)
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -142,3 +128,6 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 " Don't autofold code
 let g:pymode_folding = 0
 " end python mode settings
+
+" Vim tips
+" * Use Ctrl-] to follow links in help
