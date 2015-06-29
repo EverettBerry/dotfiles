@@ -52,7 +52,8 @@ set et
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd Filetype python setlocal shiftwidth=4 tabstop=4
 autocmd Filetype html setlocal shiftwidth=2 tabstop=2
-autocmd Filetype cpp setlocal shiftwidth=4 tabstop=4highlight found items on search
+autocmd Filetype cpp setlocal shiftwidth=4 tabstop=4
+autocmd Filetype css setlocal shiftwidth=2 tabstop=2
 
 " highlight items found on search
 set hlsearch
@@ -61,6 +62,9 @@ let g:airline#extensions#tabline#enabled = 1
 
 " show line numbers
 set number
+
+" allow mouse scrolling
+set mouse=a
 
 " show highlighting groups for current word
 nmap <C-S-P> :call <SID>SynStack()<CR>
