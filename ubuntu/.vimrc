@@ -17,6 +17,7 @@ Plugin 'klen/python-mode'                   " much python addons
 Plugin 'davidhalter/jedi-vim'               " better python auto complete
 Plugin 'tpope/vim-fugitive'                 " git in vim
 Plugin 'nachumk/systemverilog.vim'          " system verilog 
+Plugin 'ekalini/Dockerfile.vim'             " Docker syntax
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -105,6 +106,7 @@ let g:syntastic_check_on_wq = 0
 " [M            Jump on previous class or method (normal, visual, operator modes)
 " ]M            Jump on next class or method (normal, visual, operator modes)
 let g:pymode_rope = 0 " prefer jedi-mode for auto complete
+let g:syntastic_python_python_exec = '/usr/bin/python3' " python3 support
 
 " Documentation
 let g:pymode_doc = 1
