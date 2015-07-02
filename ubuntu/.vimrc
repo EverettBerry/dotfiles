@@ -54,6 +54,7 @@ autocmd Filetype python setlocal shiftwidth=4 tabstop=4
 autocmd Filetype html setlocal shiftwidth=2 tabstop=2
 autocmd Filetype cpp setlocal shiftwidth=4 tabstop=4
 autocmd Filetype css setlocal shiftwidth=2 tabstop=2
+autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 
 " highlight items found on search
 set hlsearch
@@ -90,6 +91,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 " end syntactic recommended settings
 
+
 " begin python-mode settings
 " taken from: http://unlogic.co.uk/2013/02/08/vim-as-a-python-ide/
 " Activate rope
@@ -104,6 +106,7 @@ let g:syntastic_check_on_wq = 0
 " ]]            Jump on next class or function (normal, visual, operator modes)
 " [M            Jump on previous class or method (normal, visual, operator modes)
 " ]M            Jump on next class or method (normal, visual, operator modes)
+let g:syntastic_python_python_exec = 'python3' " comment out for python 2
 let g:pymode_rope = 0 " prefer jedi-mode for auto complete
 
 " Documentation
