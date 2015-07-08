@@ -23,6 +23,17 @@ Configuration files
 13. git clone https://github.com/anthony25/gnome-terminal-colors-solarized.git
 14. install colors with ./install.sh inside that dir
 
+## Tmux powerline setup
+1. sudo pip install git+git://github.com/Lokaltog/powerline
+2. wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
+3. sudo mv PowerlineSymbols.otf /usr/share/fonts/
+4. sudo fc-cache -vf
+5. sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/
+6. sudo dpkg-reconfigure fontconfig
+7. log out and log in
+
+See this URL for more: http://askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin 
+
 # Problems
 1.  Formatting issues when copying from system clipboard to vim running inside tmux and from vim running inside tmux to terminal.  Maybe respect separate buffers?
 
