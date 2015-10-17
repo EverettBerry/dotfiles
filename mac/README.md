@@ -19,6 +19,14 @@ Configuration files
 10. git config --global push.default simple
 11. git config --global core.editor vim
 
+# Tmux Powerline Setup
+Follow instructions here: http://blog.codefront.net/2013/10/27/installing-powerline-on-os-x-homebrew/
+(may need to use google cache of page)
+1. pip install https://github.com/Lokaltog/powerline/tarball/develop
+2. install fonts from here: https://github.com/powerline/fonts
+3. Profiles > Text in iTerm and change regular & non ascii font to inconsolata for powerline
+4. pip install psutil for the monitoring stuff
+
 # Problems
 1. I think the zsh config script auto sets the PATH which may make it wrong in some cases - check the PATH in the .zsrhc if there are problems
 2. Copy mode is kinda fucked - just need to figure out how to use it properly
