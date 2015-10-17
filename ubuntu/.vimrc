@@ -56,6 +56,7 @@ autocmd Filetype html setlocal shiftwidth=2 tabstop=2
 autocmd Filetype cpp setlocal shiftwidth=4 tabstop=4
 autocmd Filetype c setlocal shiftwidth=4 tabstop=4
 autocmd Filetype yacc setlocal shiftwidth=4 tabstop=4
+autocmd Filetype lex setlocal shiftwidth=4 tabstop=4
 autocmd Filetype css setlocal shiftwidth=2 tabstop=2
 autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 
@@ -91,9 +92,9 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " turn these off if quickview is too annoying (looking at new projects)
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 " end syntactic recommended settings
 

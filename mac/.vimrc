@@ -17,6 +17,7 @@ Plugin 'klen/python-mode'                   " much python addons
 Plugin 'davidhalter/jedi-vim'               " better python auto complete
 Plugin 'tpope/vim-fugitive'                 " git in vim
 Plugin 'nachumk/systemverilog.vim'          " system verilog 
+Plugin 'ekalini/Dockerfile.vim'             " Docker syntax
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -52,7 +53,12 @@ set et
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd Filetype python setlocal shiftwidth=4 tabstop=4
 autocmd Filetype html setlocal shiftwidth=2 tabstop=2
-autocmd Filetype cpp setlocal shiftwidth=4 tabstop=4highlight found items on search
+autocmd Filetype cpp setlocal shiftwidth=4 tabstop=4
+autocmd Filetype c setlocal shiftwidth=4 tabstop=4
+autocmd Filetype yacc setlocal shiftwidth=4 tabstop=4
+autocmd Filetype lex setlocal shiftwidth=4 tabstop=4
+autocmd Filetype css setlocal shiftwidth=2 tabstop=2
+autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 
 " highlight items found on search
 set hlsearch
@@ -61,6 +67,9 @@ let g:airline#extensions#tabline#enabled = 1
 
 " show line numbers
 set number
+
+" accomodate the dark side
+set fileformats+=dos
 
 " show highlighting groups for current word
 nmap <C-S-P> :call <SID>SynStack()<CR>
@@ -131,3 +140,5 @@ let g:pymode_folding = 0
 
 " Vim tips
 " * Use Ctrl-] to follow links in help
+
+source /Users/Everett/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/plugin/powerline.vim
