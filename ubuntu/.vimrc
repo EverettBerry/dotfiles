@@ -54,6 +54,8 @@ autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd Filetype python setlocal shiftwidth=4 tabstop=4
 autocmd Filetype html setlocal shiftwidth=2 tabstop=2
 autocmd Filetype cpp setlocal shiftwidth=4 tabstop=4
+autocmd Filetype c setlocal shiftwidth=4 tabstop=4
+autocmd Filetype yacc setlocal shiftwidth=4 tabstop=4
 autocmd Filetype css setlocal shiftwidth=2 tabstop=2
 autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 
@@ -67,6 +69,9 @@ set number
 
 " allow mouse scrolling
 set mouse=a
+
+" accomodate the dark side
+set fileformats+=dos
 
 " show highlighting groups for current word
 nmap <C-S-P> :call <SID>SynStack()<CR>
@@ -107,9 +112,9 @@ let g:syntastic_check_on_wq = 0
 " ]]            Jump on next class or function (normal, visual, operator modes)
 " [M            Jump on previous class or method (normal, visual, operator modes)
 " ]M            Jump on next class or method (normal, visual, operator modes)
-let g:syntastic_python_python_exec = 'python3' " comment out for python 2
+" let g:syntastic_python_python_exec = 'python3' " comment out for python 2
 let g:pymode_rope = 0 " prefer jedi-mode for auto complete
-let g:syntastic_python_python_exec = '/usr/bin/python3' " python3 support
+" let g:syntastic_python_python_exec = '/usr/bin/python3' " python3 support
 
 " Documentation
 let g:pymode_doc = 1
