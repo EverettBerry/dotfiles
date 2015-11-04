@@ -17,7 +17,8 @@ Plugin 'klen/python-mode'                   " much python addons
 Plugin 'davidhalter/jedi-vim'               " better python auto complete
 Plugin 'tpope/vim-fugitive'                 " git in vim
 Plugin 'nachumk/systemverilog.vim'          " system verilog 
-Plugin 'ekalini/Dockerfile.vim'             " Docker syntax
+Plugin 'ekalinin/Dockerfile.vim'            " Docker syntax
+Plugin 'octol/vim-cpp-enhanced-highlight'   " better cpp highlighting
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
