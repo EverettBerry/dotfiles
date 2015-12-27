@@ -68,6 +68,9 @@ let g:airline#extensions#tabline#enabled = 1
 " show line numbers
 set number
 
+" allow mouse scrolling
+set mouse=a
+
 " accomodate the dark side
 set fileformats+=dos
 
