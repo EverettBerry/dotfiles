@@ -18,6 +18,7 @@ Plugin 'davidhalter/jedi-vim'               " better python auto complete
 Plugin 'tpope/vim-fugitive'                 " git in vim
 Plugin 'nachumk/systemverilog.vim'          " system verilog 
 Plugin 'ekalini/Dockerfile.vim'             " Docker syntax
+" Plugin 'mxw/vim-jsx'                        " For React
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -60,6 +61,12 @@ autocmd Filetype lex setlocal shiftwidth=4 tabstop=4
 autocmd Filetype css setlocal shiftwidth=2 tabstop=2
 autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 
+" no text wrapping
+" set textwidth=0 
+" set wrapmargin=0
+" set mouse=n " enable mouse in normal mode
+" set nowrap  " disable line wrapping (so there's something to scroll to)
+
 " highlight items found on search
 set hlsearch
 set laststatus=2
@@ -96,7 +103,13 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 " end syntactic recommended settings
+
+" JSX highlighting
+let g:jsx_ext_required = 0
 
 " begin python-mode settings
 " taken from: http://unlogic.co.uk/2013/02/08/vim-as-a-python-ide/
@@ -146,3 +159,6 @@ let g:pymode_folding = 0
 
 source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 set laststatus=2
+
+" remove delays for normal mode
+set timeoutlen=1000 ttimeoutlen=0
