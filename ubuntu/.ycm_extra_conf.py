@@ -7,8 +7,8 @@ import ycm_core
 # compilation database set (by default, one is not set).
 # CHANGE THIS LIST OF FLAGS. YES, THIS IS THE DROID YOU HAVE BEEN LOOKING FOR.
 flags = [
-    '-Wall',
-    '-Wextra',
+    # '-Wall',
+    # '-Wextra',
     '-Werror',
     '-Wno-long-long',
     '-Wno-variadic-macros',
@@ -33,8 +33,11 @@ flags = [
     '-isystem', '/System/Library/Frameworks/Python.framework/Headers',
     '-isystem', '/usr/local/include',
     '-isystem', '/usr/local/include/eigen3',
-    '-I', 'include',
     '-I.',
+    '-I', 'include',
+    # For ECE 469: Operating Systems
+    '-I', '../include',
+    '-I', '../include/os',
 ]
 
 # Set this to the absolute path to the folder (NOT the file!) containing the
@@ -43,7 +46,6 @@ flags = [
 #
 # Most projects will NOT need to set this to anything; you can just change the
 # 'flags' list of compilation flags. Notice that YCM itself uses that approach.
-'''
 compilation_database_folder = ''
 
 if compilation_database_folder:
@@ -65,24 +67,25 @@ def MakeRelativePathsInFlagsAbsolute( flags, working_directory ):
     for flag in flags:
         new_flag = flag
 
-    if make_next_absolute:
-        make_next_absolute = False
-        if not flag.startswith( '/' ):
-            new_flag = os.path.join( working_directory, flag )
+        if make_next_absolute:
+            make_next_absolute = False
+            if not flag.startswith( '/' ):
+                new_flag = os.path.join( working_directory, flag )
 
-    for path_flag in path_flags:
-        if flag == path_flag:
-            make_next_absolute = True
-            break
+        for path_flag in path_flags:
+            if flag == path_flag:
+                make_next_absolute = True
+                break
 
-    if flag.startswithgg( path_flag ):
-        path = flag[ len( path_flag ): ]
-        new_flag = path_flag + os.path.join( working_directory, path )
-        break
+            if flag.startswith( path_flag ):
+                path = flag[ len( path_flag ): ]
+                new_flag = path_flag + os.path.join( working_directory, path )
+                break
 
-    if new_flag:
-        new_flags.append( new_flag )
-        return new_flags
+        if new_flag:
+            new_flags.append( new_flag )
+
+    return new_flags
 
 
 def FlagsForFile( filename ):
@@ -99,4 +102,3 @@ def FlagsForFile( filename ):
         'flags': final_flags,
         'do_cache': True
     }
-'''
