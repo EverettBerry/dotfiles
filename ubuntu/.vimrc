@@ -20,7 +20,7 @@ Plugin 'tpope/vim-fugitive'                 " git in vim
 Plugin 'nachumk/systemverilog.vim'          " system verilog 
 Plugin 'ekalinin/Dockerfile.vim'            " Docker syntax
 " Plugin 'octol/vim-cpp-enhanced-highlight'   " better cpp highlighting
-" Plugin 'valloric/youcompleteme'             " autocomplete
+Plugin 'valloric/youcompleteme'             " autocomplete
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -30,7 +30,7 @@ filetype plugin indent on    " detect filetype (python, js, etc.)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" syntax enable
+syntax enable
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
@@ -136,7 +136,7 @@ set laststatus=2
 
 " Set compiler flags appropriately for C/C++
 let g:ycm_global_ycm_extra_conf = "~/dotfiles/ubuntu/.ycm_extra_conf.py"
-" let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1 }
+let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1 }
 
 " File navigator sidebar
 map <C-n> :NERDTreeToggle<CR>
