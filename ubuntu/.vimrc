@@ -44,6 +44,15 @@ syntax enable
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" YouCompleteMe Settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set compiler flags appropriately for C/C++
+let g:ycm_global_ycm_extra_conf = "~/dotfiles/ubuntu/.ycm_extra_conf.py"
+let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1 }
+let g:ycm_autoclose_preview_window_after_completion = 1
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python-mode Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " let g:syntastic_python_python_exec = 'python3' " comment out for python 2
@@ -133,10 +142,6 @@ set timeoutlen=1000 ttimeoutlen=0
 " Highlight items found on search
 set hlsearch
 set laststatus=2
-
-" Set compiler flags appropriately for C/C++
-let g:ycm_global_ycm_extra_conf = "~/dotfiles/ubuntu/.ycm_extra_conf.py"
-let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1 }
 
 " File navigator sidebar
 map <C-n> :NERDTreeToggle<CR>
