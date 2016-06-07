@@ -19,8 +19,9 @@ Plugin 'davidhalter/jedi-vim'               " better python auto complete
 Plugin 'tpope/vim-fugitive'                 " git in vim
 Plugin 'nachumk/systemverilog.vim'          " system verilog 
 Plugin 'ekalinin/Dockerfile.vim'            " Docker syntax
-" Plugin 'octol/vim-cpp-enhanced-highlight'   " better cpp highlighting
+Plugin 'octol/vim-cpp-enhanced-highlight'   " better cpp highlighting
 Plugin 'valloric/youcompleteme'             " autocomplete
+Plugin 'szw/vim-tags'                       " ctags
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -50,14 +51,15 @@ syntax enable
 let g:ycm_global_ycm_extra_conf = "~/dotfiles/ubuntu/.ycm_extra_conf.py"
 let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1 }
 let g:ycm_autoclose_preview_window_after_completion = 1
+" let g:ycm_python_binary_path = '/usr/bin/python3'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python-mode Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let g:syntastic_python_python_exec = 'python3' " comment out for python 2
-let g:pymode_rope = 0 " prefer jedi-mode for auto complete
-" let g:syntastic_python_python_exec = '/usr/bin/python3' " python3 support
+let g:syntastic_python_python_exec = 'python3' " comment out for python 2
+let g:pymode_rope = 1 " prefer jedi-mode for auto complete
+let g:syntastic_python_python_exec = '/usr/bin/python3' " python3 support
 
 " Documentation
 let g:pymode_doc = 1
