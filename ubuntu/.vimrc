@@ -11,11 +11,10 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'                " directory structure
-" Plugin 'scrooloose/syntastic'               " syntax checker
+Plugin 'scrooloose/syntastic'               " syntax checker
 Plugin 'altercation/vim-colors-solarized'   " color scheme
 Plugin 'Lokaltog/vim-powerline'             " bottom file stats
 Plugin 'klen/python-mode'                   " much python addons
-Plugin 'davidhalter/jedi-vim'               " better python auto complete
 Plugin 'tpope/vim-fugitive'                 " git in vim
 Plugin 'nachumk/systemverilog.vim'          " system verilog 
 Plugin 'ekalinin/Dockerfile.vim'            " Docker syntax
@@ -32,17 +31,8 @@ filetype plugin indent on    " detect filetype (python, js, etc.)
 " Syntastic Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
 
-" turn these off if quickview is too annoying (looking at new projects)
-" let g:syntastic_always_populate_loc_list = 0
-" let g:syntastic_auto_loc_list = 0
-" let g:syntastic_check_on_open = 0
-" let g:syntastic_check_on_wq = 0
-" end syntactic recommended settings
-
+let g:syntastic_ignore_files = ['\.py$']
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe Settings
@@ -51,25 +41,22 @@ syntax enable
 let g:ycm_global_ycm_extra_conf = "~/dotfiles/ubuntu/.ycm_extra_conf.py"
 let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1 }
 let g:ycm_autoclose_preview_window_after_completion = 1
-" let g:ycm_python_binary_path = '/usr/bin/python3'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python-mode Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:syntastic_python_python_exec = 'python3' " comment out for python 2
-let g:pymode_rope = 1 " prefer jedi-mode for auto complete
-let g:syntastic_python_python_exec = '/usr/bin/python3' " python3 support
+let g:pymode_options_max_line_length = 99
 
 " Documentation
 let g:pymode_doc = 1
 let g:pymode_doc_key = 'K'
 
-"Linting
+" Linting
+let g:pymode_lint_checkers = ["pyflakes", ]
 let g:pymode_lint = 1
-let g:pymode_lint_checker = "pyflakes,pep8"
-" Auto check on save
 let g:pymode_lint_write = 1
+let g:pymode_lint_ignore = "E2, W"
 
 " Support virtualenv
 let g:pymode_virtualenv = 1
@@ -81,11 +68,13 @@ let g:pymode_breakpoint_bind = '<leader>b'
 " syntax highlighting
 let g:pymode_syntax = 1
 let g:pymode_syntax_all = 1
-let g:pymode_syntax_indent_errors = g:pymode_syntax_all
-let g:pymode_syntax_space_errors = g:pymode_syntax_all
 
 " Don't autofold code
 let g:pymode_folding = 0
+
+" Run code from vim
+let g:pymode_run = 1
+let g:pymode_run_bind = '<leader>r'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
