@@ -10,17 +10,17 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+Plugin 'davidhalter/jedi-vim'               " best python autocomplete
+Plugin 'vim-airline/vim-airline'            " bottom bar info
+Plugin 'vim-airline/vim-airline-themes'     " dank themes
 Plugin 'scrooloose/nerdtree'                " directory structure
 Plugin 'scrooloose/syntastic'               " syntax checker
 Plugin 'altercation/vim-colors-solarized'   " color scheme
-Plugin 'Lokaltog/vim-powerline'             " bottom file stats
-Plugin 'klen/python-mode'                   " much python addons
-Plugin 'tpope/vim-fugitive'                 " git in vim
-Plugin 'nachumk/systemverilog.vim'          " system verilog 
 Plugin 'ekalinin/Dockerfile.vim'            " Docker syntax
 Plugin 'octol/vim-cpp-enhanced-highlight'   " better cpp highlighting
 Plugin 'valloric/youcompleteme'             " autocomplete
 Plugin 'szw/vim-tags'                       " ctags
+Plugin 'ctrlpvim/ctrlp.vim'                 " fuzzy file, buffer, tag finder
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -32,53 +32,30 @@ filetype plugin indent on    " detect filetype (python, js, etc.)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
 
-let g:syntastic_ignore_files = ['\.py$']
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Make sure to run python3 install.py --clang-completer
+" If that fails, may need to upgrade to cmake 3.2 via a ppa 
 " Set compiler flags appropriately for C/C++
 let g:ycm_global_ycm_extra_conf = "~/dotfiles/ubuntu/.ycm_extra_conf.py"
-let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1 }
+
+" Ignore python files for autcompletion, use jedi vim instead
+let g:ycm_filetype_blacklist = { 'python': 1 }
+
+" Compiled Vim with Python3 so need to set this to avoid server crashes
 let g:ycm_autoclose_preview_window_after_completion = 1
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Python-mode Settings
+" Jedi-vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:pymode_options_max_line_length = 99
-
-" Documentation
-let g:pymode_doc = 1
-let g:pymode_doc_key = 'K'
-
-" Linting
-let g:pymode_lint_checkers = ["pyflakes", ]
-let g:pymode_lint = 1
-let g:pymode_lint_write = 1
-let g:pymode_lint_ignore = "E2, W"
-
-" Support virtualenv
-let g:pymode_virtualenv = 1
-
-" Enable breakpoints plugin
-let g:pymode_breakpoint = 1
-let g:pymode_breakpoint_bind = '<leader>b'
-
-" syntax highlighting
-let g:pymode_syntax = 1
-let g:pymode_syntax_all = 1
-
-" Don't autofold code
-let g:pymode_folding = 0
-
-" Run code from vim
-let g:pymode_run = 1
-let g:pymode_run_bind = '<leader>r'
+let g:jedi#force_py_version = 3
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Solarized Colorscheme
+" Solarized Colorscheme (TODO: decouple terminal colors from vim)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set t_Co=256
 set background=dark
@@ -126,6 +103,10 @@ set nobackup
 " remove delay switching to normal mode
 set timeoutlen=1000 ttimeoutlen=0
 
+" CtrlP mappings
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Miscellaneous
@@ -139,3 +120,6 @@ map <C-n> :NERDTreeToggle<CR>
 
 " '%%' in command mode expanded to file's directory
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+" solarized dark airline theme
+let g:airline_theme='solarized'

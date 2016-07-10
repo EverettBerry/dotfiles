@@ -2,10 +2,20 @@
 Configuration files
 
 # Steps to setup on fresh machine (Ubuntu)
-1. apt-get install zsh
-2. apt-get install tmux
-2. apt-get install xclip
-2. apt-get install vim
+1. sudo apt-get install zsh tmux xclip
+1. compile vim from source without python2, follow: https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source, then
+```bash
+cd ~
+git clone https://github.com/vim/vim.git
+cd vim
+./configure --with-features=huge \
+            --enable-multibyte \
+            --enable-python3interp \
+            --with-python3-config-dir=/usr/lib/python3.4/config-python3.4m-x86_64-linux-gnu \
+            --enable-gui=gtk2 --enable-cscope --prefix=/usr
+make VIMRUNTIMEDIR=/usr/share/vim/vim74
+sudo make install
+```
 2. chsh (change shell, enter pw, zsh is /usr/bin/zsh for linux)
 2. log out for zsh shell change to take effect
 3. wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
