@@ -90,4 +90,4 @@ bindkey '^N' history-search-forward
 # tmux assume 256 colors
 alias tmux="tmux -2"
 export ANDROID_HOME="/Users/Everett/Library/Android/sdk"
-export PATH="/Users/Everett/Library/Android/sdk/platform-tools":$PATH
+export PATH="/home/epberry/lib":$PATH
