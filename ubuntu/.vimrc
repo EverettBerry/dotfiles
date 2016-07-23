@@ -11,8 +11,9 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'davidhalter/jedi-vim'               " best python autocomplete
-Plugin 'vim-airline/vim-airline'            " bottom bar info
-Plugin 'vim-airline/vim-airline-themes'     " dank themes
+" Plugin 'vim-airline/vim-airline'            " bottom bar info
+" Plugin 'vim-airline/vim-airline-themes'     " dank themes
+Plugin 'powerline/powerline'
 Plugin 'scrooloose/nerdtree'                " directory structure
 Plugin 'scrooloose/syntastic'               " syntax checker
 Plugin 'altercation/vim-colors-solarized'   " color scheme
@@ -106,6 +107,9 @@ set timeoutlen=1000 ttimeoutlen=0
 " CtrlP mappings
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+" Powerline
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
