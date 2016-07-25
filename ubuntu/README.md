@@ -16,7 +16,7 @@ cd vim
 make VIMRUNTIMEDIR=/usr/share/vim/vim74
 sudo make install
 ```
-2. chsh (change shell, enter pw, zsh is /usr/bin/zsh for linux)
+2. chsh (change shell, enter pw, zsh is /usr/bin/zsh for linux) OR sudo chsh ubuntu -s /usr/bin/zsh
 2. log out for zsh shell change to take effect
 3. wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
 4. git clone everettberry/dotfiles.git
