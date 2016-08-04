@@ -10,7 +10,6 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Plugin 'davidhalter/jedi-vim'               " best python autocomplete
 Plugin 'powerline/powerline'                " status line
 Plugin 'scrooloose/nerdtree'                " directory structure
 Plugin 'scrooloose/syntastic'               " syntax checker
@@ -36,23 +35,10 @@ syntax enable
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Make sure to run python3 install.py --clang-completer
+" Make sure to run python install.py --clang-completer
 " If that fails, may need to upgrade to cmake 3.2 via a ppa 
 " Set compiler flags appropriately for C/C++
 let g:ycm_global_ycm_extra_conf = "~/dotfiles/ubuntu/.ycm_extra_conf.py"
-
-" Ignore python files for autcompletion, use jedi vim instead
-let g:ycm_filetype_blacklist = { 'python': 1 }
-
-" Compiled Vim with Python3 so need to set this to avoid server crashes
-let g:ycm_autoclose_preview_window_after_completion = 1
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Jedi-vim
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Uncomment if vim is installed with Python3
-" let g:jedi#force_py_version = 3
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
