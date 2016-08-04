@@ -11,9 +11,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'davidhalter/jedi-vim'               " best python autocomplete
-" Plugin 'vim-airline/vim-airline'            " bottom bar info
-" Plugin 'vim-airline/vim-airline-themes'     " dank themes
-Plugin 'powerline/powerline'
+Plugin 'powerline/powerline'                " status line
 Plugin 'scrooloose/nerdtree'                " directory structure
 Plugin 'scrooloose/syntastic'               " syntax checker
 Plugin 'altercation/vim-colors-solarized'   " color scheme
@@ -22,6 +20,7 @@ Plugin 'octol/vim-cpp-enhanced-highlight'   " better cpp highlighting
 Plugin 'valloric/youcompleteme'             " autocomplete
 Plugin 'szw/vim-tags'                       " ctags
 Plugin 'ctrlpvim/ctrlp.vim'                 " fuzzy file, buffer, tag finder
+Plugin 'lepture/vim-jinja'                  " templating language
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
