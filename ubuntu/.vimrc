@@ -51,7 +51,8 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Jedi-vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:jedi#force_py_version = 3
+" Uncomment if vim is installed with Python3
+" let g:jedi#force_py_version = 3
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
