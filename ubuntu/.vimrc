@@ -40,6 +40,7 @@ syntax enable
 " Set compiler flags appropriately for C/C++
 let g:ycm_global_ycm_extra_conf = "~/dotfiles/ubuntu/.ycm_extra_conf.py"
 
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Solarized Colorscheme (TODO: decouple terminal colors from vim)

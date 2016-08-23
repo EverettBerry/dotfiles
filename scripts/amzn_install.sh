@@ -5,7 +5,10 @@ git config --global user.name "Everett Berry"
 git config --global user.email "everettpberry@gmail.com"
 git clone https://github.com/anthony25/gnome-terminal-colors-solarized.git
 
-# Vim configuration
+# Vim configuration (get a newer version of vim than included with 14.04)
+sudo add-apt-repository -y ppa:pi-rho/dev
+sudo apt-get update
+sudo apt-get install -y vim
 mkdir -p ~/.vim/bundle
 ln -s ~/dotfiles/ubuntu/.vimrc ~/.vimrc
 git clone https://github.com/gmarik/vundle ~/.vim/bundle/Vundle.vim 

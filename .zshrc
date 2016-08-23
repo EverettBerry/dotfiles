@@ -92,5 +92,3 @@ alias tmux="tmux -2"
 export ANDROID_HOME="/Users/Everett/Library/Android/sdk"
 export PATH="/home/epberry/lib":$PATH
 
-
-. /home/epberry/lib/torch/install/bin/torch-activate
