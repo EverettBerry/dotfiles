@@ -19,7 +19,7 @@ Plugin 'octol/vim-cpp-enhanced-highlight'   " better cpp highlighting
 Plugin 'valloric/youcompleteme'             " autocomplete
 Plugin 'szw/vim-tags'                       " ctags
 Plugin 'ctrlpvim/ctrlp.vim'                 " fuzzy file, buffer, tag finder
-Plugin 'lepture/vim-jinja'                  " templating language
+Plugin 'rhysd/vim-crystal'                  " crystal language 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -39,6 +39,7 @@ syntax enable
 " If that fails, may need to upgrade to cmake 3.2 via a ppa 
 " Set compiler flags appropriately for C/C++
 let g:ycm_global_ycm_extra_conf = "~/dotfiles/ubuntu/.ycm_extra_conf.py"
+let g:ycm_python_binary_path = '/usr/bin/python3'
 
 let g:ycm_autoclose_preview_window_after_completion = 1
 
