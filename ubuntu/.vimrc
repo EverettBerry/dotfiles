@@ -20,6 +20,7 @@ Plugin 'valloric/youcompleteme'             " autocomplete
 Plugin 'szw/vim-tags'                       " ctags
 Plugin 'ctrlpvim/ctrlp.vim'                 " fuzzy file, buffer, tag finder
 Plugin 'rhysd/vim-crystal'                  " crystal language 
+Plugin 'lepture/vim-jinja'                  " jinja templating language
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -52,19 +53,23 @@ let g:solarized_termtrans = 1
 colorscheme solarized
 call togglebg#map("<F5>") " see README for details about this
 
+" Set the vertical split color so it doesn't stand out
+hi VertSplit ctermbg=black ctermfg=black
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Whitespace 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set backspace=indent,eol,start
-
 set expandtab
 set smarttab 
+set autoindent
 
 au FileType javascript setl shiftwidth=2 ts=2
 au Filetype css setlocal shiftwidth=2 ts=2
 au Filetype html setlocal shiftwidth=2 ts=2
+au Filetype jinja setlocal shiftwidth=2 ts=2
 au Filetype python setlocal shiftwidth=4 ts=4
+let g:pyindent_open_paren = '&sw'
 
 au Filetype cpp setlocal shiftwidth=4 ts=4
 au Filetype c setlocal shiftwidth=4 ts=4
@@ -94,10 +99,16 @@ set timeoutlen=1000 ttimeoutlen=0
 
 " CtrlP mappings
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_cmd = 'CtrlP ~/perceive-code'
 
 " Powerline
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+
+" No line numbers
+set nonumber
+
+" Remove pipe characters in vertical bar
+:set fillchars+=vert:\  
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
