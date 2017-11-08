@@ -81,9 +81,6 @@ au FileType make set noexpandtab shiftwidth=8 softtabstop=0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim Environment
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Show line numbers
-set number
-
 " allow mouse scrolling
 set mouse=a
 
@@ -100,6 +97,12 @@ set timeoutlen=1000 ttimeoutlen=0
 " CtrlP mappings
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP ~/perceive-code'
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=20
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.yardoc\|node_modules\|log\|tmp$',
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ }
 
 " Powerline
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
