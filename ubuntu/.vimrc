@@ -10,9 +10,10 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Plugin 'powerline/powerline'                " status line
+Plugin 'vim-airline/vim-airline'            " status lin-ubuntue
+Plugin 'vim-airline/vim-airline-themes'            " status lin-ubuntue
 Plugin 'scrooloose/nerdtree'                " directory structure
-Plugin 'scrooloose/syntastic'               " syntax checker
+" Plugin 'scrooloose/syntastic'               " syntax checker
 Plugin 'altercation/vim-colors-solarized'   " color scheme
 Plugin 'ekalinin/Dockerfile.vim'            " Docker syntax
 Plugin 'octol/vim-cpp-enhanced-highlight'   " better cpp highlighting
@@ -129,3 +130,6 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 " solarized dark airline theme
 let g:airline_theme='solarized'
+
+" hide INSERT below status line
+set noshowmode
