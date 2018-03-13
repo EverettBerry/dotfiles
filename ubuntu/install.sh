@@ -22,6 +22,7 @@ python ~/.vim/bundle/youcompleteme/install.py --clang-completer
 # Shell configuration
 sudo apt-get install -y zsh
 ln -s ~/dotfiles/.zshrc ~/.zshrc
+ln -s ~/dotfiles/ubuntu/.zshenv ~/.zshenv
 sudo chsh $USER -s /usr/bin/zsh
 
 # Tmux
