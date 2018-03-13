@@ -105,9 +105,6 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
 
-" Powerline
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-
 " No line numbers
 set nonumber
 
