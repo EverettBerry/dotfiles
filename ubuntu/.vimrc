@@ -97,7 +97,7 @@ set timeoutlen=1000 ttimeoutlen=0
 
 " CtrlP mappings
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP ~/perceive-code'
+let g:ctrlp_cmd = 'CtrlP ' . $PERCEIVE_CODE
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=20
 let g:ctrlp_custom_ignore = {

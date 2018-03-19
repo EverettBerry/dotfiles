@@ -53,3 +53,7 @@ export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
 setopt hist_ignore_all_dups
 
+# Share history across sessions
+setopt inc_append_history
+setopt sharehistory
+
