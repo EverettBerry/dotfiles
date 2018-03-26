@@ -3,6 +3,7 @@ import ycm_core
 import os
 
 multiview_include_dir = os.path.join(os.environ['PERCEIVE_CODE'], 'multiview/multiview/multiview_cpp/src')
+multiview_alglib = os.path.join(os.environ['PERCEIVE_CODE'], 'multiview/multiview/contrib/alglib/include')
 flags = [
     '-Wall',
     '-Wextra',
@@ -19,6 +20,7 @@ flags = [
     '-I', '/usr/include/eigen3',
     '-I', '/usr/include/jsoncpp',
     '-I', multiview_include_dir,
+    '-I', multiview_alglib,
     ]
 
 SOURCE_EXTENSIONS = [ '.cpp', '.cxx', '.cc', '.c', ]

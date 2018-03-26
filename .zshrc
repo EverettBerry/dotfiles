@@ -1,3 +1,6 @@
+# Reload zshrc
+# source ~/.zshrc
+
 export EDITOR="vim"
 bindkey -v 
 export KEYTIMEOUT=1
