@@ -13,8 +13,8 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Plugin 'vim-airline/vim-airline'            " status lin-ubuntue
-Plugin 'vim-airline/vim-airline-themes'            " status lin-ubuntue
+Plugin 'vim-airline/vim-airline'            " status line
+Plugin 'vim-airline/vim-airline-themes'     " status line theme (solarized)
 Plugin 'scrooloose/nerdtree'                " directory structure
 " Plugin 'scrooloose/syntastic'               " syntax checker
 Plugin 'altercation/vim-colors-solarized'   " color scheme
@@ -55,7 +55,8 @@ set t_Co=256
 set background=dark
 let g:solarized_termtrans = 1
 colorscheme solarized
-call togglebg#map("<F5>") " see README for details about this
+" commenting out because never used and interferes with fn 5 in vscode
+" call togglebg#map("<F5>") " see README for details about this
 
 " Set the vertical split color so it doesn't stand out
 hi VertSplit ctermbg=black ctermfg=black

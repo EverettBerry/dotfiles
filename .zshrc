@@ -60,3 +60,5 @@ setopt hist_ignore_all_dups
 setopt inc_append_history
 setopt sharehistory
 
+# Disable control flow (freezes terminal and easy to do accidentally)
+stty -ixon
