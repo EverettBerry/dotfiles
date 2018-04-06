@@ -16,15 +16,16 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-airline/vim-airline'            " status line
 Plugin 'vim-airline/vim-airline-themes'     " status line theme (solarized)
 Plugin 'scrooloose/nerdtree'                " directory structure
-" Plugin 'scrooloose/syntastic'               " syntax checker
 Plugin 'altercation/vim-colors-solarized'   " color scheme
-Plugin 'ekalinin/Dockerfile.vim'            " Docker syntax
-Plugin 'octol/vim-cpp-enhanced-highlight'   " better cpp highlighting
 Plugin 'valloric/youcompleteme'             " autocomplete
 Plugin 'szw/vim-tags'                       " ctags
 Plugin 'ctrlpvim/ctrlp.vim'                 " fuzzy file, buffer, tag finder
-Plugin 'rhysd/vim-crystal'                  " crystal language 
+Plugin 'tpope/vim-commentary'               " block commenting/uncommenting
+
+" Language specific
+Plugin 'octol/vim-cpp-enhanced-highlight'   " better cpp highlighting
 Plugin 'lepture/vim-jinja'                  " jinja templating language
+Plugin 'ekalinin/Dockerfile.vim'            " Docker syntax
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -40,7 +41,7 @@ syntax enable
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Make sure to run python install.py --clang-completer
+" Make sure to run python3 install.py --clang-completer
 " If that fails, may need to upgrade to cmake 3.2 via a ppa 
 " Set compiler flags appropriately for C/C++
 let g:ycm_global_ycm_extra_conf = "~/dotfiles/ubuntu/.ycm_extra_conf.py"
