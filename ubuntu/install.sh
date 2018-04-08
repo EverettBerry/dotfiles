@@ -17,7 +17,7 @@ ln -s ~/dotfiles/ubuntu/.vimrc ~/.vimrc
 git clone https://github.com/gmarik/vundle ~/.vim/bundle/Vundle.vim 
 vim +BundleInstall +qall
 sudo apt-get install -y cmake
-python ~/.vim/bundle/youcompleteme/install.py --clang-completer
+python3 ~/.vim/bundle/youcompleteme/install.py --clang-completer
 
 # Shell configuration
 sudo apt-get install -y zsh
@@ -25,6 +25,11 @@ ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/ubuntu/.zshenv ~/.zshenv
 sudo chsh $USER -s /usr/bin/zsh
 
-# Tmux
+# Tmux and xclip for copy-paste out of tmux
 sudo apt-get install -y tmux
+sudo apt-get install xclip 
 ln -s ~/dotfiles/ubuntu/.tmux.conf ~/.tmux.conf
+
+# Caps lock
+sudo apt-get install gnome-tweak-tool
+echo "Run 'gnome-tweak-tool' > 'Typing' to map CAPS to ESC"
