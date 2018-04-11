@@ -1,5 +1,6 @@
-" Reload .vimrc
-" :so %
+" Easy-to-forget commands:
+" Reload .vimrc                :so %
+" Generate tags file           :TagsGenerate!
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vundle Settings

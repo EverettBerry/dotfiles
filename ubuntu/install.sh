@@ -12,6 +12,7 @@ git clone https://github.com/anthony25/gnome-terminal-colors-solarized.git
 sudo add-apt-repository -y ppa:pi-rho/dev
 sudo apt-get update
 sudo apt-get install -y vim
+sudo apt-get install exuberant-ctags
 mkdir -p ~/.vim/bundle
 ln -s ~/dotfiles/ubuntu/.vimrc ~/.vimrc
 git clone https://github.com/gmarik/vundle ~/.vim/bundle/Vundle.vim 
@@ -33,3 +34,17 @@ ln -s ~/dotfiles/ubuntu/.tmux.conf ~/.tmux.conf
 # Caps lock
 sudo apt-get install gnome-tweak-tool
 echo "Run 'gnome-tweak-tool' > 'Typing' to map CAPS to ESC"
+echo "Reboot for changes to take effect"
+
+echo "\n\nNot installing common packages..."
+# sudo apt-get install vlc
+# set vlc to open multiple windows, make default video player
+# sudo apt-get install google-chrome-stable
+# sudo apt-get install xubuntu-desktop
+# sudo pip3 install --upgrade pip
+# sudo pip3 install awscli
+# slack
+# dropbox
+# docker
+# dynalist
+
