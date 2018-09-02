@@ -27,6 +27,7 @@ Plugin 'tpope/vim-commentary'               " block commenting/uncommenting
 Plugin 'octol/vim-cpp-enhanced-highlight'   " better cpp highlighting
 Plugin 'lepture/vim-jinja'                  " jinja templating language
 Plugin 'ekalinin/Dockerfile.vim'            " Docker syntax
+Plugin 'sbdchd/neoformat'                   " Prettier
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -38,6 +39,11 @@ filetype plugin indent on    " detect filetype (python, js, etc.)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Prettier
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufWritePre *.js Neoformat
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe Settings
@@ -118,6 +124,8 @@ set nonumber
 :set fillchars+=vert:\  
 
 
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Miscellaneous
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -136,3 +144,7 @@ let g:airline_theme='solarized'
 
 " hide INSERT below status line
 set noshowmode
+
+" paste and match indent
+:nnoremap p ]p
+:nnoremap <c-p> p

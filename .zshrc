@@ -62,3 +62,9 @@ setopt sharehistory
 
 # Disable control flow (freezes terminal and easy to do accidentally)
 stty -ixon
+
+# Autocomplete from the middle of the filename
+zstyle ':completion:*' completer _complete
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
+autoload -Uz compinit
+compinit
