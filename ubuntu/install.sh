@@ -36,6 +36,10 @@ sudo apt-get install gnome-tweak-tool
 echo "Run 'gnome-tweak-tool' > 'Typing' to map CAPS to ESC"
 echo "Reboot for changes to take effect"
 
+# FZF
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
 echo "\n\nNot installing common packages..."
 # sudo apt-get install vlc
 # set vlc to open multiple windows, make default video player
