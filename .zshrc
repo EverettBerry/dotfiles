@@ -57,8 +57,7 @@ export SAVEHIST=$HISTSIZE
 setopt hist_ignore_all_dups
 
 # Share history across sessions
-setopt inc_append_history
-setopt sharehistory
+setopt share_history
 
 # Disable control flow (freezes terminal and easy to do accidentally)
 stty -ixon
