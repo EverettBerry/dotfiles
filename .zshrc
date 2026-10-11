@@ -77,3 +77,7 @@ alias ls='ls --color=auto'
 alias fvim='vim "`fzf`"'
 
 
+eval "$(rbenv init - zsh)"
+
+# opencode
+export PATH=/home/everett/.opencode/bin:$PATH
